@@ -6,13 +6,13 @@
   },
   "builders": [{
     "type": "amazon-ebs",
-    "access_key": "{%raw%}{{user `aws_access_key`}}{%endraw%}",
-    "secret_key": "{%raw%}{{user `aws_secret_key`}}{%endraw%}",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
     "region": "us-east-1",
     "source_ami": "ami-c58c1dd3",
     "instance_type": "t2.micro",
     "ssh_username": "ec2-user",
-    "ami_name": "Hello World Service Build-{%raw%}{{.Build}}{%endraw%} created at {%raw%}{{timestamp}}{%endraw%}"
+    "ami_name": "Hello World Service Build-{{.Build}} created at {{timestamp}}"
   }],
   "provisioners": [{
     "type": "shell",
