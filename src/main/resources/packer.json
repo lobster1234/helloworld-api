@@ -23,7 +23,7 @@
       "sudo yum remove java-1.7.0-openjdk  -y",
       "sudo wget https://github.com/lobster1234/helloworld-api/files/953511/helloworld-api.war.gz -O /usr/share/tomcat8/webapps/helloworld-api.war.gz",
       "sudo gunzip /usr/share/tomcat8/webapps/helloworld-api.war.gz",
-      "sudo service tomcat8 start"
+      "sudo chkconfig tomcat8 on"
     ]
   }]
 }
