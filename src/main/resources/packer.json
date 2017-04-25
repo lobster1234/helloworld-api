@@ -12,7 +12,7 @@
     "source_ami": "ami-c58c1dd3",
     "instance_type": "t2.micro",
     "ssh_username": "ec2-user",
-    "ami_name": "HelloWorld Build-{{user `Build`}}"
+    "ami_name": "HelloWorld Build-{{env `Build`}}"
   }],
   "provisioners": [{
     "type": "shell",
